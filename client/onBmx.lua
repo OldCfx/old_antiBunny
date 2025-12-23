@@ -33,8 +33,6 @@ Citizen.CreateThread(function()
                 jumpCount = (currentTime - lastJumpTime < Config.resetTime) and (jumpCount + 1) or 1
                 lastJumpTime = currentTime
 
-                print("JumpCount:", jumpCount)
-
                 if jumpCount >= Config.maxJumps then
                     TriggerRagdoll(ped, veh)
                     jumpCount = 0
